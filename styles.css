@@ -1,0 +1,225 @@
+*, ::before, ::after { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #1A3C5E;
+    padding: 16px;
+    color: white;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 12px 12px 0 0;
+}
+
+h1 {
+    font-size: 1.2rem;
+    padding: 0;
+}
+
+#searchBox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    background-color: white;
+    width: 100%;
+    max-width: 420px;
+}
+
+#cityName {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  flex: 1;
+  /* border: none; */
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+#searchBtn {
+  padding: 8px 14px;
+  background-color: #2E86AB;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+#searchBtn:hover {
+  background-color: #155a7a;
+}
+
+main {
+  width: 100%;
+  max-width: 420px;
+  background-color: white;
+  border-radius: 0 0 12px 12px;
+  overflow: hidden;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+#currentDisplay {
+  background-color: #2E86AB;
+  padding: 30px 20px;
+  color: #f0f0f0;
+  text-align: center;
+  width: 100%;
+  border-radius: 12px;
+}
+
+#currentDisplay:hover {
+  background-color: #155a7a;
+}
+
+#wmoIcon {
+  font-size: 3rem;
+  margin-bottom: 8px;
+}
+
+#cityCountry {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+#currentDisplay h2 {
+  font-size: 2.5rem;
+  margin-bottom: 4px;
+}
+
+#wmoDesc {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.stats_row {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 9px;
+  margin: 8px 0 8px 0;
+}
+#humBox, #windBox {
+  border-right: 2px solid #eee;
+  padding-right: 50px;
+}
+
+.stats_row p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.85rem;
+  color: gray;
+}
+
+.stats_row span {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #1A3C5E;
+  margin-top: 4px;
+}
+
+section:last-child > p {
+  padding: 12px 16px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: gray;
+  letter-spacing: 0.5px;
+}
+
+#forecastContainer {
+  padding: 0 16px;
+}
+
+.eachForecast {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  background-color: #fcfafa;
+  border-bottom: 1px solid #eee;
+  border: 1px solid #ccc;
+  border-radius: 9px;
+  margin-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.eachForecast:last-child {
+  border-bottom: none;
+}
+
+.weekDay {
+  font-weight: bold;
+  color: #1A3C5E;
+  width: 100px;
+}
+
+.weatherIcon {
+  font-size: 1.5rem;
+  text-align: center;
+  flex: 1;
+}
+
+.day-temp {
+  text-align: right;
+}
+
+.high {
+  font-weight: bold;
+  color: #1A3C5E;
+  display: block;
+}
+
+.low {
+  color: gray;
+  font-size: 0.85rem;
+  display: block;
+}
+
+#errorMsg {
+  display: none; /* hidden by default */
+  background-color: #ffe0e0;
+  color: #cc0000;
+  padding: 10px 16px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+#loadingMsg {
+  display: none; /* hidden by default */
+  background-color: #edfed0;
+  color: #33cc00;
+  padding: 10px 16px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+    header, main {
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    #cityName {
+        width: 140px;
+    }
+}

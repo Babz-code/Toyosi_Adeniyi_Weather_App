@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./styles.css" rel="stylesheet" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <!-- The header section -->
+    <header>
+      <h1>Weather App</h1>
+    </header>
+    <div id="searchBox">
+      <input type="text" id="cityName" placeholder="Lagos" />
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <!-- Error message -->
+    <div id="errorMsg"></div>
+
+    <!-- Loading message -->
+    <div id="loadingMsg">Fetching data! Please wait a moment</div>
+
+    <!-- The main section -->
+    <main>
+      <!-- Hero section -->
+      <section>
+        <div id="currentDisplay">
+          <p id="wmoIcon">--</p>
+          <p id="cityCountry">City, Country</p>
+          <h2><span id="temperature">0</span>°C</h2>
+          <p id="wmoDesc">--</p>
+        </div>
+
+        <!-- The Stats row -->
+        <div class="stats_row">
+          <p id="humBox">Humidity <span id="humidity">--%</span></p>
+          <p id="windBox">Wind <span id="wind">-- km/h</span></p>
+          <p>UV Index <span id="uvIndex">--</span></p>
+        </div>
+      </section>
+
+      <!-- The Forecast section -->
+      <section>
+        <p>5-DAY FORECAST</p>
+        <div id="forecastContainer"></div>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
